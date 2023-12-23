@@ -10,7 +10,7 @@ function RecentExpenses() {
     const today = new Date();
     const date7DaysAgo = getDateMinusDays(today, 7);
 
-    return expense.date > date7DaysAgo;
+    return expense.date >= date7DaysAgo && expense.date <= today;
   });
 
   return (
