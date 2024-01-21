@@ -4,13 +4,22 @@ import IconButton from "../components/UI/IconButton";
 import { GlobalStyles } from "../constants/styles";
 import { ExpensesContext } from "../store/expenses-context";
 import ExpenseForm from "../components/ManageExpense/ExpenseForm";
-import { deleteExpense, storeExpense, updateExpense } from "../util/http";
+import {
+  deleteExpense,
+  storeExpense,
+  updateExpense as updateExpenseHttp,
+} from "../util/http";
 import LoadingOverlay from "../components/UI/LoadingOverlay";
 import ErrorOverlay from "../components/UI/ErrorOverlay";
-import { func } from "prop-types";
+import { auth } from "../firebase";
 
 function ManageExpense({ route, navigation }) {
   const expensesCtx = useContext(ExpensesContext);
+  if (!expensesCtx) {
+    return null; // Or render a loading spinner, for example
+  }
+
+  const { uid } = expensesCtx;
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState();
@@ -31,18 +40,14 @@ function ManageExpense({ route, navigation }) {
   async function deleteExpenseHandler() {
     setIsSubmitting(true);
     try {
-      await deleteExpense(editedExpenseId);
+      await deleteExpense(uid, editedExpenseId);
       expensesCtx.deleteExpense(editedExpenseId);
     } catch (error) {
       setError("Could not delete expense - please try again later!");
-      setIsSubmitting(false); // set isSubmitting to false again so that the loading overlay disappears
+      setIsSubmitting(false);
     }
     navigation.goBack();
   }
-
-  // function errorHandler() {
-  //   setError(null);
-  // }
 
   if (error && !isSubmitting) {
     return <ErrorOverlay message={error} />;
@@ -53,19 +58,24 @@ function ManageExpense({ route, navigation }) {
   }
 
   async function confirmHandler(expenseData) {
+    if (auth.currentUser === null) {
+      return;
+    }
     setIsSubmitting(true);
     try {
       if (isEditing) {
-        expensesCtx.updateExpense(editedExpenseId, expenseData);
-        await updateExpense(editedExpenseId, expenseData);
+        const response = await expensesCtx.updateExpense(
+          uid,
+          editedExpenseId,
+          expenseData
+        );
       } else {
-        const id = await storeExpense(expenseData);
-        expensesCtx.addExpense({ ...expenseData, id: id });
+        expensesCtx.addExpense(expenseData);
       }
       navigation.goBack();
     } catch (error) {
       setError("Could not save data - please try again later!");
-      setIsSubmitting(false); // set isSubmitting to false again so that the loading overlay disappears
+      setIsSubmitting(false);
     }
   }
 
@@ -77,11 +87,14 @@ function ManageExpense({ route, navigation }) {
     <View style={styles.container}>
       <ExpenseForm
         submitButtonLabel={isEditing ? "Update" : "Add"}
-        onSubmit={confirmHandler}
+        onSubmit={(expenseData) => {
+          console.log("ExpenseForm onSubmit called");
+          confirmHandler(expenseData);
+        }}
         onCancel={cancelHandler}
         defaultValues={selectedExpense}
+        isSubmitting={isSubmitting}
       />
-      <TextInput />
       {isEditing && (
         <View style={styles.deleteContainer}>
           <IconButton

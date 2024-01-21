@@ -1,6 +1,13 @@
-import { createContext, useReducer } from "react";
+import { createContext, useReducer, useEffect } from "react";
+import {
+  storeExpense,
+  fetchExpenses,
+  updateExpense as updateExpenseHttp,
+  deleteExpense as deleteExpenseHttp, // <-- Renamed imported function
+} from "../util/http";
 
 export const ExpensesContext = createContext({
+  uid: null,
   expenses: [],
   addExpense: ({ description, ammount, date }) => {},
   setExpenses: (expenses) => {},
@@ -16,14 +23,11 @@ function expensesReducer(state, action) {
       const inverted = action.payload.reverse();
       return inverted;
     case "UPDATE":
-      const updatableExpenseIndex = state.findIndex(
-        (expense) => expense.id === action.payload.id
+      return state.map((expense) =>
+        expense.id === action.payload.id
+          ? { ...expense, ...action.payload.data }
+          : expense
       );
-      const updatableExpense = state[updatableExpenseIndex];
-      const updatedItem = { ...updatableExpense, ...action.payload.data };
-      const updatedExpenses = [...state];
-      updatedExpenses[updatableExpenseIndex] = updatedItem;
-      return updatedExpenses;
     case "DELETE":
       return state.filter((expense) => expense.id !== action.payload);
     default:
@@ -31,11 +35,21 @@ function expensesReducer(state, action) {
   }
 }
 
-function ExpensesContextProvider({ children }) {
+function ExpensesContextProvider({ children, uid }) {
   const [expensesState, dispatch] = useReducer(expensesReducer, []);
 
+  useEffect(() => {
+    if (uid) {
+      fetchExpenses(uid).then(setExpenses);
+    }
+  }, [uid]);
+
   function addExpense(expenseData) {
-    dispatch({ type: "ADD", payload: expenseData });
+    if (uid) {
+      storeExpense(uid, expenseData).then((id) => {
+        dispatch({ type: "ADD", payload: { ...expenseData, id: id } });
+      });
+    }
   }
 
   function setExpenses(expenses) {
@@ -43,14 +57,29 @@ function ExpensesContextProvider({ children }) {
   }
 
   function deleteExpense(id) {
-    dispatch({ type: "DELETE", payload: id });
+    if (uid) {
+      deleteExpenseHttp(uid, id).then(() => {
+        dispatch({ type: "DELETE", payload: id });
+      });
+    }
   }
 
-  function updateExpense(id, expenseData) {
-    dispatch({ type: "UPDATE", payload: { id: id, data: expenseData } });
+  async function updateExpense(uid, id, expenseData) {
+    if (uid) {
+      try {
+        await updateExpenseHttp(uid, id, expenseData);
+        return dispatch({
+          type: "UPDATE",
+          payload: { id: id, data: expenseData },
+        });
+      } catch (error) {
+        throw error;
+      }
+    }
   }
 
   const value = {
+    uid: uid,
     expenses: expensesState,
     setExpenses: setExpenses,
     addExpense: addExpense,
