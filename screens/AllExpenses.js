@@ -1,12 +1,14 @@
-import { useContext } from "react";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import ExpensesOutput from "../components/ExpensesOutput/ExpensesOutput";
-import { ExpensesContext } from "../store/expenses-context";
+import { fetchExpensesAsync } from "../redux/slice";
 
 function AllExpenses() {
-  const expensesCtx = useContext(ExpensesContext);
+  const expenses = useSelector((state) => state.items);
+
   return (
     <ExpensesOutput
-      expenses={expensesCtx.expenses}
+      expenses={expenses}
       expensesPeriod="Total"
       fallbackText="No registered expenses found"
     />

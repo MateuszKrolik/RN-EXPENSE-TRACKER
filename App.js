@@ -9,10 +9,13 @@ import AllExpenses from "./screens/AllExpenses";
 import { GlobalStyles } from "./constants/styles";
 import { Ionicons } from "@expo/vector-icons";
 import IconButton from "./components/UI/IconButton";
-import ExpensesContextProvider from "./store/expenses-context";
 import { signInAnonymously, getAuth, onAuthStateChanged } from "firebase/auth";
 import ReactNativeAsyncStorage from "@react-native-async-storage/async-storage";
 import { app, auth } from "./firebase";
+import { Provider, useDispatch } from "react-redux";
+import { fetchExpensesAsync } from "./redux/slice";
+import { store, persistor } from "./redux/store";
+import { PersistGate } from "redux-persist/integration/react";
 
 const Stack = createNativeStackNavigator();
 const BottomTabs = createBottomTabNavigator();
@@ -63,19 +66,20 @@ function ExpensesOverview() {
   );
 }
 
-export default function App() {
+function AppContent() {
   const [uid, setUid] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     ReactNativeAsyncStorage.getItem("uid").then((storedUid) => {
-      if (storedUid) {
+      if (storedUid && !uid) {
         setUid(storedUid);
         setIsLoading(false);
       } else {
         signInAnonymously(auth)
           .then((userCredential) => {
-            if (userCredential.user) {
+            if (userCredential.user && !uid) {
               setUid(userCredential.user.uid);
               ReactNativeAsyncStorage.setItem("uid", userCredential.user.uid);
             }
@@ -88,24 +92,27 @@ export default function App() {
     });
 
     const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
+      if (user && !uid) {
         setUid(user.uid);
         ReactNativeAsyncStorage.setItem("uid", user.uid);
-      } else {
-        setUid(null);
-        ReactNativeAsyncStorage.removeItem("uid");
       }
       setIsLoading(false);
     });
 
     return () => unsubscribe();
+  }, [uid]);
+
+  useEffect(() => {
+    if (uid) {
+      dispatch(fetchExpensesAsync(uid));
+    }
   }, []);
 
   if (isLoading) {
     return null;
   }
   return (
-    <ExpensesContextProvider uid={uid}>
+    <>
       <StatusBar style="light" />
       <NavigationContainer>
         <Stack.Navigator
@@ -130,6 +137,16 @@ export default function App() {
           />
         </Stack.Navigator>
       </NavigationContainer>
-    </ExpensesContextProvider>
+    </>
+  );
+}
+
+export default function App() {
+  return (
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <AppContent />
+      </PersistGate>
+    </Provider>
   );
 }

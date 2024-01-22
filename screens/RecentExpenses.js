@@ -1,6 +1,7 @@
-import { useContext, useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import ExpensesOutput from "../components/ExpensesOutput/ExpensesOutput";
-import { ExpensesContext } from "../store/expenses-context";
+import { fetchExpensesAsync } from "../redux/slice";
 import { getDateMinusDays } from "../util/date";
 import { fetchExpenses } from "../util/http";
 import LoadingOverlay from "../components/UI/LoadingOverlay";
@@ -9,26 +10,38 @@ import ErrorOverlay from "../components/UI/ErrorOverlay";
 function RecentExpenses() {
   const [isFetching, setIsFetching] = useState(true);
   const [error, setError] = useState();
+  const [recentExpenses, setRecentExpenses] = useState([]); // Define recentExpenses here
+  const [timestamp, setTimestamp] = useState(Date.now()); // Add a timestamp state
 
-  const expensesCtx = useContext(ExpensesContext);
+  const expenses = useSelector((state) => state.items);
+  const userId = useSelector((state) => state.userId);
+  const dispatch = useDispatch(); // Add this line
 
   useEffect(() => {
-    async function getExpenses() {
-      setIsFetching(true);
-      try {
-        const expenses = await fetchExpenses();
-        expensesCtx.setExpenses(expenses); // only set expenses if fetching was successful
-      } catch (error) {
-        setError("Could not fetch expenses!");
-      }
+    if (userId) {
+      dispatch(fetchExpensesAsync(userId)); // Dispatch the action with the user ID
+    }
+  }, [userId, dispatch]); // Run when the component mounts and whenever userId changes
+
+  useEffect(() => {
+    if (expenses && expenses.length !== 0) {
       setIsFetching(false);
     }
-    getExpenses();
-  }, []);
+  }, [expenses]);
 
-  // function errorHandler() {
-  //   setError(null);
-  // }
+  useEffect(() => {
+    if (expenses) {
+      // Check if expenses is not undefined
+      const filteredExpenses = expenses.filter((expense) => {
+        const today = new Date();
+        const date7DaysAgo = getDateMinusDays(today, 7);
+        const expenseDate = new Date(expense.date);
+        return expenseDate >= date7DaysAgo && expenseDate <= today;
+      });
+      setRecentExpenses(filteredExpenses); // Set recentExpenses here
+      setIsFetching(false);
+    }
+  }, [expenses, timestamp]); // Add timestamp to the dependency array
 
   if (error && !isFetching) {
     return <ErrorOverlay message={error} />;
@@ -37,13 +50,6 @@ function RecentExpenses() {
   if (isFetching) {
     return <LoadingOverlay />;
   }
-
-  const recentExpenses = expensesCtx.expenses.filter((expense) => {
-    const today = new Date();
-    const date7DaysAgo = getDateMinusDays(today, 7);
-
-    return expense.date >= date7DaysAgo && expense.date <= today;
-  });
 
   return (
     <ExpensesOutput

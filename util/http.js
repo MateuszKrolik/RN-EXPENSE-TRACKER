@@ -19,6 +19,9 @@ export async function storeExpense(uid, expenseData) {
 }
 
 export async function fetchExpenses(uid) {
+  if (!uid) {
+    return [];
+  }
   try {
     const response = await axios.get(`${BACKEND_URL}/expenses/${uid}.json`);
     const expenses = [];
@@ -27,7 +30,7 @@ export async function fetchExpenses(uid) {
       const expenseObj = {
         id: key,
         amount: response.data[key].amount,
-        date: new Date(response.data[key].date),
+        date: response.data[key].date,
         description: response.data[key].description,
       };
       expenses.push(expenseObj);
@@ -70,6 +73,9 @@ export function deleteExpense(uid, id) {
   return auth.currentUser.getIdToken().then((idToken) => {
     return axios
       .delete(`${BACKEND_URL}/expenses/${uid}/${id}.json?auth=${idToken}`)
+      .then((response) => {
+        return response;
+      })
       .catch((error) => {
         throw error;
       });

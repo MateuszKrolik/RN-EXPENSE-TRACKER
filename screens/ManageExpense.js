@@ -1,25 +1,21 @@
-import { useContext, useLayoutEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import { View, StyleSheet, TextInput } from "react-native";
 import IconButton from "../components/UI/IconButton";
 import { GlobalStyles } from "../constants/styles";
-import { ExpensesContext } from "../store/expenses-context";
+import { useSelector, useDispatch } from "react-redux";
 import ExpenseForm from "../components/ManageExpense/ExpenseForm";
 import {
-  deleteExpense,
-  storeExpense,
-  updateExpense as updateExpenseHttp,
-} from "../util/http";
+  deleteExpenseAsync,
+  addExpenseAsync,
+  updateExpenseAsync,
+} from "../redux/slice";
 import LoadingOverlay from "../components/UI/LoadingOverlay";
 import ErrorOverlay from "../components/UI/ErrorOverlay";
 import { auth } from "../firebase";
 
 function ManageExpense({ route, navigation }) {
-  const expensesCtx = useContext(ExpensesContext);
-  if (!expensesCtx) {
-    return null; // Or render a loading spinner, for example
-  }
-
-  const { uid } = expensesCtx;
+  const expenses = useSelector((state) => state.items);
+  const dispatch = useDispatch();
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState();
@@ -27,9 +23,10 @@ function ManageExpense({ route, navigation }) {
   const editedExpenseId = route.params?.expenseId;
   const isEditing = !!editedExpenseId;
 
-  const selectedExpense = expensesCtx.expenses.find(
-    (expense) => expense.id === editedExpenseId
-  );
+  // Check if expenses is defined before calling find on it
+  const selectedExpense = expenses
+    ? expenses.find((expense) => expense.id === editedExpenseId)
+    : null; // return null if expenses is undefined
 
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -40,8 +37,9 @@ function ManageExpense({ route, navigation }) {
   async function deleteExpenseHandler() {
     setIsSubmitting(true);
     try {
-      await deleteExpense(uid, editedExpenseId);
-      expensesCtx.deleteExpense(editedExpenseId);
+      await dispatch(
+        deleteExpenseAsync({ uid: auth.currentUser.uid, id: editedExpenseId })
+      );
     } catch (error) {
       setError("Could not delete expense - please try again later!");
       setIsSubmitting(false);
@@ -63,14 +61,25 @@ function ManageExpense({ route, navigation }) {
     }
     setIsSubmitting(true);
     try {
+      const expenseDataSerializable = {
+        ...expenseData,
+        date: expenseData.date.toISOString(),
+      };
       if (isEditing) {
-        const response = await expensesCtx.updateExpense(
-          uid,
-          editedExpenseId,
-          expenseData
+        await dispatch(
+          updateExpenseAsync({
+            uid: auth.currentUser.uid,
+            id: editedExpenseId,
+            expenseData: expenseDataSerializable,
+          })
         );
       } else {
-        expensesCtx.addExpense(expenseData);
+        await dispatch(
+          addExpenseAsync({
+            uid: auth.currentUser.uid,
+            expenseData: expenseDataSerializable,
+          })
+        );
       }
       navigation.goBack();
     } catch (error) {
@@ -88,7 +97,6 @@ function ManageExpense({ route, navigation }) {
       <ExpenseForm
         submitButtonLabel={isEditing ? "Update" : "Add"}
         onSubmit={(expenseData) => {
-          console.log("ExpenseForm onSubmit called");
           confirmHandler(expenseData);
         }}
         onCancel={cancelHandler}
