@@ -68,6 +68,13 @@
 ![Product Name Screen Shot][product-screenshot-6]
 ![Product Name Screen Shot][product-screenshot-7]
 ![Product Name Screen Shot][product-screenshot-8]
+![Product Name Screen Shot][product-screenshot-9]
+![Product Name Screen Shot][product-screenshot-10]
+![Product Name Screen Shot][product-screenshot-11]
+![Product Name Screen Shot][product-screenshot-12]
+![Product Name Screen Shot][product-screenshot-13]
+![Product Name Screen Shot][product-screenshot-14]
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -225,16 +232,22 @@ Use this space to list resources you find helpful and would like to give credit 
 [license-url]: https://github.com/MateuszKrolik/RN-EXPENSE-TRACKER/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/mateusz-kr%C3%B3lik-8b1862262/
-[product-screenshot-1]: images/screenshot.png
-[product-screenshot-2]: images/screenshot.png
-[product-screenshot-3]: images/screenshot.png
-[product-screenshot-4]: images/screenshot.png
-[product-screenshot-5]: images/screenshot.png
-[product-screenshot-6]: images/screenshot.png
-[product-screenshot-7]: images/screenshot.png
-[product-screenshot-8]: images/screenshot.png
-
-
+[product-screenshot-1]: images/android-apk-qr.png
+[product-screenshot-2]: images/android-home-screen.png
+[product-screenshot-3]: images/ios-home-screen.png
+[product-screenshot-4]: images/splash.png
+[product-screenshot-5]: images/android-add.png
+[product-screenshot-6]: images/ios-add.png
+[product-screenshot-7]: images/android-no-recent.png
+[product-screenshot-8]: images/ios-no-recent.png
+[product-screenshot-7]: images/android-all.png
+[product-screenshot-8]: images/ios-all.png
+[product-screenshot-9]: images/android-error-handling.png
+[product-screenshot-10]: images/ios-error-handling.png
+[product-screenshot-11]: images/android-error-handling.png
+[product-screenshot-12]: images/ios-error-handling.png
+[product-screenshot-13]: images/ios-flatlist-scroll.png
+[product-screenshot-14]: images/figma-expo.png
 
 
 [unix-shield]: https://img.shields.io/badge/Unix-FCC624?style=for-the-badge&logo=linux&logoColor=black
