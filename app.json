@@ -16,7 +16,8 @@
     ],
     "ios": {
       "buildNumber": "1.0.0",
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.mateuszkrolik87.myexpensetracker"
     },
     "android": {
       "versionCode": 1,
