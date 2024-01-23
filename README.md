@@ -60,14 +60,14 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot-1]](http://django-blog2-env.eba-fervsqvb.eu-north-1.elasticbeanstalk.com/)
-[![Product Name Screen Shot][product-screenshot-2]](http://django-blog2-env.eba-fervsqvb.eu-north-1.elasticbeanstalk.com/posts)
-[![Product Name Screen Shot][product-screenshot-3]]([https://example.com](http://django-blog2-env.eba-fervsqvb.eu-north-1.elasticbeanstalk.com/posts/title))
-[![Product Name Screen Shot][product-screenshot-4]]([https://example.com](http://django-blog2-env.eba-fervsqvb.eu-north-1.elasticbeanstalk.com/read-later))
-[![Product Name Screen Shot][product-screenshot-5]](http://django-blog2-env.eba-fervsqvb.eu-north-1.elasticbeanstalk.com/admin/login/?next=/admin/)
-[![Product Name Screen Shot][product-screenshot-6]](http://django-blog2-env.eba-fervsqvb.eu-north-1.elasticbeanstalk.com/admin/)
-[![Product Name Screen Shot][product-screenshot-7]](http://django-blog2-env.eba-fervsqvb.eu-north-1.elasticbeanstalk.com/admin/blog/post/add/)
-[![Product Name Screen Shot][product-screenshot-8]](http://django-blog2-env.eba-fervsqvb.eu-north-1.elasticbeanstalk.com/admin/blog/post/add/)
+[![Product Name Screen Shot][product-screenshot-1]]
+[![Product Name Screen Shot][product-screenshot-2]]
+[![Product Name Screen Shot][product-screenshot-3]]
+[![Product Name Screen Shot][product-screenshot-4]]
+[![Product Name Screen Shot][product-screenshot-5]]
+[![Product Name Screen Shot][product-screenshot-6]]
+[![Product Name Screen Shot][product-screenshot-7]]
+[![Product Name Screen Shot][product-screenshot-8]]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -83,8 +83,8 @@
 - [![Firestore][firestore-shield]][firestore-url]
 - [![Firebase Auth][firebase-auth-shield]][firebase-auth-url]
 - [![EAS][eas-shield]][eas-url]
-- [![Linux][Linux.com]][Linux-url]
-- [![Nginx][Nginx.com]][Nginx-url]
+- [![Unix][unix-shield]][unix-url]
+- [![Bash][bash-shield]][bash-url]
 - [![Flexbox][flexbox-shield]][flexbox-url]
 - [![GCP][gcp-shield]][gcp-url]
 - [![Figma][figma-shield]][figma-url]
@@ -93,31 +93,40 @@
 - [![Xcode][xcode-shield]][xcode-url]
 - [![Android Studio][android-studio-shield]][android-studio-url]
 - [![React Navigation][react-navigation-shield]][react-navigation-url]
+- [![Babel][babel-shield]][babel-url]
 
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
-
 ## Getting Started
 
-When setting up the project locally, I suggest adding own custom environment variables via a .env file, 
-as well as on the hosting providers side.
-
-I also suggest making migrations and migrating when making changes to the database.
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-You should have Python3 and PostgreSQL drivers installed. 
-
-I also suggest setting up a virtual environment
+This is an example of how to list things you need to use the software and how to install them.
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
 
 ### Installation
 
-1. Clone the repo
+1. Get a free API Key at [https://example.com](https://example.com)
+2. Clone the repo
    ```sh
-   git clone https://github.com/MateuszKrolik/RN-EXPENSE-TRACKER.git
+   git clone https://github.com/github_username/repo_name.git
+   ```
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+4. Enter your API in `config.js`
+   ```js
+   const API_KEY = 'ENTER YOUR API';
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -133,22 +142,12 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 
 <!-- ROADMAP -->
+## Roadmap
 
-## Roadmap & Usage
-
-- [x] Responsive landing page with navigation
-- [x] All posts page
-- [x] Post detail page
-  - [x] Tag Display Functionality
-  - [x] "Add to Read Later" button functionality
-  - [x] Redirect to post's author mail client through Admin Panel functionality
-  - [x] Add, Save & Post comment for non-logged in users functionality
-- [x] Read Later Page with saved posts display functionality
-- [x] Authentication & Authorization using Django's Admin Panel
-- [x] Customized Admin Panel
-  - [x] Add post page
-    - [x] Image Upload with Image from Disk Picker via AWS S3
-    - [x] Tag functionality
+- [ ] Feature 1
+- [ ] Feature 2
+- [ ] Feature 3
+    - [ ] Nested Feature
 
 
 See the [open documentation](https://github.com/MateuszKrolik/RN-EXPENSE-TRACKER/issues) for a full list of proposed features (and known issues).
@@ -235,10 +234,10 @@ Use this space to list resources you find helpful and would like to give credit 
 
 
 
-[Linux.com]: https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black
-[Linux-url]: https://www.linux.org/
-[Nginx.com]: https://img.shields.io/badge/Nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white
-[Nginx-url]: https://www.nginx.com/
+
+[unix-shield]: https://img.shields.io/badge/Unix-FCC624?style=for-the-badge&logo=linux&logoColor=black
+[unix-url]: https://www.unix.com/
+
 
 [flexbox-shield]: https://img.shields.io/badge/Flexbox-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white
 [flexbox-url]: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout
@@ -260,7 +259,8 @@ Use this space to list resources you find helpful and would like to give credit 
 [firebase-url]: https://firebase.google.com/
 
 
-[firebase-auth-shield]: https://img.shields.io/badge/Firebase_Auth-0000FF?style=for-the-badge&logo=firebase&logoColor=white
+[firebase-auth-shield]: https://img.shields.io/badge/FirebaseAuth-000020?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIj4KICA8ZGVmcz4KICAgIDxjbGlwUGF0aCBpZD0iYSI+CiAgICAgIDxjaXJjbGUgY3g9Ijk2IiBjeT0iOTYiIHI9Ijk2IiBmaWxsPSJub25lIi8+CiAgICA8L2NsaXBQYXRoPgogIDwvZGVmcz4KICA8ZyBjbGlwLXBhdGg9InVybCgjYSkiIGZpbGw9Im5vbmUiPgogICAgPHBhdGggZmlsbD0iI2ZmYzEwNyIgZD0iTTAgMGgxOTJ2MTkySDB6Ii8+CiAgICA8cGF0aCBkPSJNMTAxLjc2NSA3MS44NzhsMS4yODktMi4zNzkgMS43MDgtMi4wNyAyLjA3LTEuNzA5IDIuMzc5LTEuMjg5IDIuNjMtLjgxNCAyLjgyNi0uMjg0IDIuODIzLjI4NCAyLjYyNS44MTQgMi4zNyAxLjI5IDIuMDYzIDEuNzA3IDEwMDAgMTAwMCAxLjcgMi4wNzEgMS4yODEgMi4zNzkuODEgMi42My4yODEgMi44MjUtLjI4MiAyLjgyNi0uODA5IDIuNjMtMS4yODEgMi4zNzgtMS43IDIuMDcxLTEuODY2IDEuNTQ2IDIxLjA3NiAyMS4wNzcgMS40OTIgMS41OTQgMS4xMjYgMS43MjEuNzEgMS44NDkuMjQ3IDEuOTc1djExLjY2N2gtMjhsLTkuMzMzLTkuMzM0djkuMzM0aC02NS4zMzNsLTEwMDAtMTAwMFYxMTdsLjI0Ny0xLjk3NS43MS0xLjg0OSAxLjEyNi0xLjcyMSAxLjQ5Mi0xLjU5NCAxLjgxMS0xLjQ2NyAyLjA4My0xLjM0IDIuMzA1LTEuMjEzIDIuNDgyLTEuMDg1IDUuMjk2LTEuNzg4IDUuNDIzLTEuMjc4IDUuMTY2LS43NjcgMi4zNjctLjE5MiAyLjE1OC0uMDY0IDIuMTYuMDY0IDEuNTU0LjEyNi0xMy42MTktMTMuNjE5LTEuNzA4LTIuMDctMS4yODktMi4zNzktLjgxNC0yLjYzLS4yODQtMi44MjYuMjg0LTIuODI1LjgxNC0yLjYzIDEuMjktMi4zNzkgMS43MDctMi4wN0w2OS41IDY1LjcybDIuMzc5LTEuMjg5IDIuNjMtLjgxNCAyLjgyNS0uMjg0IDIuODI0LjI4NCAyLjYyNS44MTQgMi4zNyAxLjI5IDIuMDYzIDEuNzA3IDE0LjE4NiAxNC4xODYtLjQ1LTEuNDU1LS4yODQtMi44MjYuMjg0LTIuODI1eiIgZmlsbD0iI2ZmYjMwMCIvPgogICAgPHBhdGggZD0iTTEwMS43NjUgNzEuODc4bDEuMjg5LTIuMzc5IDEuNzA4LTIuMDcgMi4wNy0xLjcwOSAyLjM3OS0xLjI4OSAyLjYzLS44MTQgMi44MjYtLjI4NCAyLjgyMy4yODQgMi42MjUuODE0IDIuMzcgMS4yOSAyLjA2MyAxLjcwN0wxOTIgMTM0Ljg4VjE5MmgtODRsLTYzLjMzMy02My4zMzNWMTE3bC4yNDctMS45NzUuNzEtMS44NDkgMS4xMjYtMS43MjEgMS40OTItMS41OTQgMS44MTEtMS40NjcgMi4wODMtMS4zNCAyLjMwNS0xLjIxMyAyLjQ4Mi0xLjA4NSA1LjI5Ni0xLjc4OCA1LjQyMy0xLjI3OCA1LjE2Ni0uNzY3IDIuMzY3LS4xOTIgMi4xNTgtLjA2NCAyLjE2LjA2NCAxLjU1NC4xMjYtMTMuNjE5LTEzLjYxOS0xLjcwOC0yLjA3LTEuMjg5LTIuMzgtLjgxNC0yLjYyOS0uMjg0LTIuODI2LjI4NC0yLjgyNS44MTQtMi42MyAxLjI5LTIuMzc5IDEuNzA3LTIuMDdMNjkuNSA2NS43MmwyLjM3OS0xLjI4OSAyLjYzLS44MTQgMi44MjUtLjI4NCAyLjgyNC4yODQgMi42MjUuODE0IDIuMzcgMS4yOSAyLjA2MyAxLjcwNyAxNC4xODYgMTQuMTg2LS40NS0xLjQ1NS0uMjg0LTIuODI2LjI4NC0yLjgyNXoiIGZpbGw9IiNmZmIzMDAiLz4KICAgIDxwYXRoIGQ9Ik0xMTQuNjY3IDkxLjMzM2M3Ljc0NiAwIDEzLjk1My02LjI1MyAxMy45NTMtMTQgMC03Ljc0Ni02LjIwNy0xNC0xMy45NTMtMTQtNy43NDcgMC0xNCA2LjI1NC0xNCAxNCAwIDcuNzQ3IDYuMjUzIDE0IDE0IDE0em0tMzcuMzM0IDBjNy43NDcgMCAxMy45NTQtNi4yNTMgMTMuOTU0LTE0IDAtNy43NDYtNi4yMDctMTQtMTMuOTU0LTE0LTcuNzQ2IDAtMTQgNi4yNTQtMTQgMTQgMCA3Ljc0NyA2LjI1NCAxNCAxNCAxNHptMCA5LjMzNGMtMTAuODczIDAtMzIuNjY2IDUuNDYtMzIuNjY2IDE2LjMzM3YxMS42NjdIMTEwVjExN2MwLTEwLjg3My0yMS43OTMtMTYuMzMzLTMyLjY2Ny0xNi4zMzN6bTM3LjMzNCAwYy0xLjM1NCAwLTIuODk0LjA5My00LjUyNy4yMzMgNS40MTMgMy45MiA5LjE5MyA5LjE5MyA5LjE5MyAxNi4xdjExLjY2N2gyOFYxMTdjMC0xMC44NzMtMjEuNzkzLTE2LjMzMy0zMi42NjYtMTYuMzMzeiIgZmlsbD0iI2ZmZiIgZmlsbC1ydWxlPSJldmVub2RkIi8+CiAgPC9nPgo8L3N2Zz4K&logoColor=white
+
 [firebase-auth-url]: https://firebase.google.com/products/auth
 
 
@@ -285,9 +285,20 @@ Use this space to list resources you find helpful and would like to give credit 
 [android-studio-shield]: https://img.shields.io/badge/Android%20Studio-%233DDC84.svg?style=for-the-badge&logo=android-studio&logoColor=white
 [android-studio-url]: https://developer.android.com/studio
 
-[firestore-shield]: https://img.shields.io/badge/Firestore-%23039BE5.svg?style=for-the-badge&logo=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyNS4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCA1MDAgNTAwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MDAgNTAwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojRkZDMjRBO30NCgkuc3Qxe2ZpbGw6I0Y0QkQ2Mjt9DQoJLnN0MntmaWxsOiNGNjgyMEM7fQ0KCS5zdDN7ZmlsbDojRkRFMDY4O30NCgkuc3Q0e2ZpbGw6I0ZDQ0EzRjt9DQoJLnN0NXtmaWxsOiNFRUFCMzc7fQ0KCS5zdDZ7ZmlsbC1ydWxlOmV2ZW5vZGQ7Y2xpcC1ydWxlOmV2ZW5vZGQ7ZmlsbDojNzU3NTc1O30NCgkuc3Q3e2ZpbGwtcnVsZTpldmVub2RkO2NsaXAtcnVsZTpldmVub2RkO2ZpbGw6I0ZGRkZGRjt9DQo8L3N0eWxlPg0KPGc+DQoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTk0LjcsMzYyLjFsMi4yLTMuMWwxMDQuNS0xOTguM2wwLjItMi4xTDE1NS41LDcyYy0zLjktNy4zLTE0LjctNS40LTE2LDIuN0w5NC43LDM2Mi4xeiIvPg0KCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0yMzUuMiwyMjQuMWwzNC4zLTM1LjFsLTM0LjMtNjUuNWMtMy4zLTYuMi0xMi40LTYuMi0xNS42LDBsLTE4LjMsMzV2M0wyMzUuMiwyMjQuMXoiLz4NCgk8cG9seWdvbiBjbGFzcz0ic3QyIiBwb2ludHM9Ijk0LjcsMzYyLjEgOTUuNywzNjEuMSA5OS4zLDM1OS42IDIzMy4xLDIyNi40IDIzNC43LDIyMS44IDIwMS40LDE1OC4yIAkiLz4NCgk8cGF0aCBjbGFzcz0ic3QzIiBkPSJNMjM5LjUsNDI5LjNsMTIxLTY3LjVsLTM0LjYtMjEyLjljLTEuMS02LjctOS4zLTkuMy0xNC00LjVMOTQuNywzNjIuMWwxMjAuNCw2Ny4yDQoJCUMyMjIuNiw0MzMuNiwyMzEuOSw0MzMuNiwyMzkuNSw0MjkuMyIvPg0KCTxwYXRoIGNsYXNzPSJzdDQiIGQ9Ik0zNTkuNSwzNjEuMkwzMjUuMiwxNTBjLTEuMS02LjYtNy45LTkuMy0xMi42LTQuNkw5NiwzNjEuN2wxMTksNjYuNWM3LjUsNC4yLDE2LjcsNC4yLDI0LjMsMEwzNTkuNSwzNjEuMnoiLz4NCgk8cGF0aCBjbGFzcz0ic3Q1IiBkPSJNMjM5LjUsNDI3LjNjLTcuNiw0LjItMTYuOSw0LjItMjQuNSwwTDk1LjYsMzYxLjFsLTEsMUwyMTUsNDI5LjNjNy42LDQuMiwxNi45LDQuMiwyNC41LDBsMTIxLTY3LjVsLTAuMy0xLjgNCgkJTDIzOS41LDQyNy4zeiIvPg0KCQ0KCQk8ZWxsaXBzZSB0cmFuc2Zvcm09Im1hdHJpeCgwLjE1OTggLTAuOTg3MiAwLjk4NzIgMC4xNTk4IC02OC42NTA2IDYxNC41MzMzKSIgY2xhc3M9InN0NiIgY3g9IjMyNi43IiBjeT0iMzQ3LjYiIHJ4PSI3OC43IiByeT0iNzguNyIvPg0KCTxwb2x5Z29uIGNsYXNzPSJzdDciIHBvaW50cz0iMjkxLjEsMzI2LjIgMzI2LjEsMzA4LjUgMzYyLjEsMzI2LjIgMzYyLjEsMzQ0LjIgMzI2LjEsMzI2LjQgMjkxLjEsMzQ0LjIgCSIvPg0KCTxwb2x5Z29uIGNsYXNzPSJzdDciIHBvaW50cz0iMjkxLjEsMzU2LjkgMzI2LjEsMzM5LjEgMzYyLjEsMzU2LjkgMzYyLjEsMzc0LjggMzI2LjEsMzU3IDI5MS4xLDM3NC44IAkiLz4NCgk8cG9seWdvbiBjbGFzcz0ic3Q3IiBwb2ludHM9IjMyNi4yLDM3NC40IDMzNi40LDM2OS42IDM1NC40LDM3Ny45IDMyNi4yLDM5MS40IAkiLz4NCjwvZz4NCjwvc3ZnPg0K&logoColor=white
+[babel-shield]: https://img.shields.io/badge/Babel-%23F9DC3E.svg?style=for-the-badge&logo=babel&logoColor=black
+[babel-url]: https://babeljs.io/
+
+[bash-shield]: https://img.shields.io/badge/Bash-%234EAA25.svg?style=for-the-badge&logo=gnu-bash&logoColor=white
+[bash-url]: https://www.gnu.org/software/bash/
+
+
+
+[firestore-shield]: https://img.shields.io/badge/Firestore-%23039BE5.svg?style=for-the-badge&logo=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KDTwhLS0gVXBsb2FkZWQgdG86IFNWRyBSZXBvLCB3d3cuc3ZncmVwby5jb20sIEdlbmVyYXRvcjogU1ZHIFJlcG8gTWl4ZXIgVG9vbHMgLS0+Cjxzdmcgd2lkdGg9IjgwMHB4IiBoZWlnaHQ9IjgwMHB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+Cg08ZGVmcz4KDTxzdHlsZT4uY2xzLTF7ZmlsbDojNjY5ZGY2O30uY2xzLTJ7ZmlsbDojYWVjYmZhO30uY2xzLTN7ZmlsbDojNDI4NWY0O308L3N0eWxlPgoNPC9kZWZzPgoNPHRpdGxlPkljb25fMjRweF9GaXJlc3RvcmVfQ29sb3I8L3RpdGxlPgoNPGcgZGF0YS1uYW1lPSJQcm9kdWN0IEljb25zIj4KDTxnIGRhdGEtbmFtZT0iY29sb3JlZC0zMi9maXJlc3RvcmUiPgoNPGcgPgoNPHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMjEsMTMsMTIsOXY0bDksNFptMC03TDEyLDJWNmw5LDRaIi8+Cg08cG9seWdvbiBpZD0iUmVjdGFuZ2xlLTciIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIzIDYgMTIgMiAxMiA2IDMgMTAgMyA2Ii8+Cg08cG9seWdvbiBpZD0iUmVjdGFuZ2xlLTctMiIgZGF0YS1uYW1lPSJSZWN0YW5nbGUtNyIgY2xhc3M9ImNscy0yIiBwb2ludHM9IjMgMTMgMTIgOSAxMiAxMyAzIDE3IDMgMTMiLz4KDTxwb2x5Z29uIGlkPSJSZWN0YW5nbGUtNy0zIiBkYXRhLW5hbWU9IlJlY3RhbmdsZS03IiBjbGFzcz0iY2xzLTMiIHBvaW50cz0iMTIgMTggMTUuMzcgMTYuNSAxOS44OCAxOC41IDEyIDIyIDEyIDE4Ii8+Cg08L2c+Cg08L2c+Cg08L2c+Cg08L3N2Zz4=&logoColor=white
 [firestore-url]: https://firebase.google.com/products/firestore
 
-[react-navigation-shield]: https://img.shields.io/badge/React_Navigation-%23000000.svg?style=for-the-badge&logoUrl=https://raw.githubusercontent.com/MateuszKrolik/RN-EXPENSE-TRACKER/master/images/29647600%20(1)%201%20(1).svg 
+[react-navigation-shield]: https://img.shields.io/badge/ReactNavigation-FFFFFF?style=for-the-badge&logo=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMjAwMTAxMDEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvVFIvMjAwMS9SRUMtU1ZHLTIwMDEwMTAxL0RURC9zdmcxMC5kdGQiPgo8c3ZnIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgMjAwIDIwMCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLjAwMDAwMCwyMDAuMDAwMDAwKSBzY2FsZSgwLjEwMDAwMCwtMC4xMDAwMDApIiBmaWxsPSIjMDAwMDAwIiBzdHJva2U9Im5vbmUiPgogICAgPHBhdGggZD0iTTg3NSAxODQwIGMtODQgLTE2IC0xNjUgLTQ4IC0yODAgLTExMiAtMTMyIC03NCAtMTIwIC02NSAtMjE5IC0xNjQKLTk1IC05NCAtMTU0IC0xOTcgLTE4NyAtMzI2IC0zMSAtMTIxIC0zMCAtMzY5IDEgLTQ4MyA0MyAtMTU2IDEzMSAtMjk1IDI0MwotMzgzIDg1IC02NyAyMzcgLTE1MyAzMzIgLTE4OCA3NiAtMjcgODkgLTI5IDI0MCAtMjkgMTk0IDAgMjMzIDExIDQyNyAxMjMKMTIwIDY5IDIxNCAxNDkgMjcwIDIzMCA0MCA1OSA5MiAxNjUgMTE0IDIzNyAxNiA1MCAxOSA5MiAxOSAyNTAgMCAxNzEgLTIgMTk3Ci0yMyAyNjQgLTQ4IDE1MiAtMTM5IDI4NiAtMjU2IDM3NyAtMzMgMzAgLTcyIDU0IC03NyA1NCAtNSAwIC0yOCAxMiAtNTEgMjYKLTE0MyA5MCAtMjQ1IDEyNCAtMzkzIDEyOSAtNjAgMiAtMTMyIDAgLTE2MCAtNXogbTIwMCAtMzkgbDQwIC03IC01NSAtNyBjLTMwCi00IC04MCAtNCAtMTEwIDAgLTQ5IDYgLTUyIDggLTI1IDE0IDQxIDkgMTAyIDkgMTUwIDB6IG0tMjc0IC05MiBjLTI5IC0xNwotNzggLTUxIC0xMDggLTc1IC0yOSAtMjQgLTYyIC00NCAtNzEgLTQ0IC0xMCAwIC0yMiAtNCAtMjcgLTggLTYgLTUgLTI2IC0xNQotNDUgLTIyIC0xOSAtOCAtNTQgLTI3IC03NyAtNDIgLTI0IC0xNiAtNDMgLTI2IC00MyAtMjIgMCAxMiA3NSAxMDAgMTE1IDEzNQoyMiAxOSA0MiAzNyA0NSA0MSAxNSAxOSAxNzQgNjYgMjMwIDY3IGwzNSAxIC01NCAtMzF6IG00NTQgMjAgYzEwMCAtMTggMTYxCi01MiAyNDIgLTEzNCA0MCAtNDEgNzMgLTgwIDczIC04NiAwIC02IC0yOCA1IC02MiAyNCAtMzUgMTkgLTg1IDQyIC0xMTMgNTIKLTI3IDEwIC02OSAzNiAtOTMgNTcgLTIzIDIxIC01MiA0MyAtNjUgNDkgLTEyIDUgLTM4IDE5IC01NyAyOSAtMzMgMTggLTM0IDE5Ci05IDIwIDE0IDAgNTIgLTUgODQgLTExeiBtLTE2MiAtMTcgYzcgLTUgMjcgLTE0IDQ0IC0yMCAxOCAtNiA1NCAtMjYgODAgLTQ0Cmw0OCAtMzMgLTk3IC02IGMtNTYgLTQgLTExMCAtMTMgLTEyOCAtMjMgLTMwIC0xNCAtMzYgLTE0IC05MSA0IC0zNiAxMiAtODUKMjAgLTEyOSAyMCAtMzggMCAtNzAgNCAtNzAgOSAwIDEyIDEwMiA2OSAxNjUgOTMgNTIgMTkgMTUzIDIwIDE3OCAweiBtLTIwMAotMTUxIGM1MSAtMTIgNTUgLTE4IDI2IC0zOCAtMTMgLTkgLTUxIC00NSAtODQgLTc5IC01MyAtNTUgLTY2IC02NCAtMTE2IC03NAotMzEgLTYgLTc5IC0yMCAtMTA4IC0zMCAtMjggLTExIC01MSAtMTYgLTUxIC0xMiAwIDUgNyAzMCAxNiA1NyAzMCA4NiA4NiAxNjkKMTIwIDE3OCAzMyA4IDE1NyA3IDE5NyAtMnogbTQ0OSAtMjIgYzEzIC0xNCAzMyAtNDIgNDUgLTYxIDIzIC00MCA2NiAtMTQ5IDYwCi0xNTUgLTIgLTIgLTI1IDUgLTUwIDE2IC0yNSAxMSAtNzEgMjUgLTEwMyAzMCAtNTIgMTAgLTY0IDE4IC0xNDQgOTMgLTQ3IDQ2Ci04NSA4NSAtODQgODcgOSAxMSA4MSAyMCAxNjEgMTggODQgLTIgOTMgLTQgMTE1IC0yOHogbS03NzAgLTUxIGMtMjIgLTM4IC02MgotMTQ5IC02MiAtMTc2IDAgLTkgLTMxIC00OSAtNjggLTg4IC0zOCAtMzkgLTc0IC04NSAtODEgLTEwMiAtMzMgLTc2IC00MiAyOQotMTYgMTY1IDEzIDcxIDE5IDgyIDU4IDExOCA2NSA2MSAxNzQgMTMyIDE4NSAxMjAgMiAtMiAtNSAtMTkgLTE2IC0zN3ogbTkyNgotMSBjMzAgLTE4IDc1IC01MyAxMDIgLTgwIDQ0IC00MyA0OSAtNTMgNjQgLTEzMCAxOCAtOTIgMjEgLTE3MyA2IC0xODIgLTUgLTMKLTE5IDE0IC0zMSAzNyAtMTIgMjQgLTQ4IDY4IC04MSA5OSAtNDkgNDkgLTYwIDY0IC02OCAxMDggLTUgMjcgLTI1IDgyIC00NQoxMjIgLTM5IDgwIC0zOCA4MSA1MyAyNnogbS00MzkgLTIgYzI1IC0xOSA3MCAtNTkgOTkgLTg5IDM5IC0zOSA2NCAtNTYgOTAKLTYxIDU0IC05IDE2MyAtNDYgMTkxIC02MyAyMSAtMTQgMjMgLTIxIDE3IC03MCAtNCAtMjkgLTE2IC04NyAtMjggLTEyOCAtMjIKLTc0IC0yMiAtNzYgLTQgLTEzNyA5IC0zNCAyMiAtOTAgMjggLTEyNCAxMCAtNTYgOSAtNjUgLTcgLTgzIC0xNiAtMTggLTg3Ci00NCAtMTk1IC03MSAtMzMgLTggLTU5IC0yNiAtMTA1IC03MiAtMzMgLTMzIC03NyAtNzMgLTk5IC04OCAtMzMgLTI3IC0zOQotMjggLTY4IC0xMyAtMTcgOSAtNjUgNDkgLTEwNyA5MCAtNzAgNjkgLTExMyA5NCAtMTYxIDk0IC0xOCAwIC0xMTMgMzUgLTE0MAo1MiAtMjQgMTIgLTIzIDMxIC0zOCA0MiAtMzIgMjEgLTQgMjEgMjAgMCAyMiAtMjEgMzggLTQyIDMxIC0zMCAyMyAtMTIgMjQgLTUyIDE0IC0xNDAgMCAgLTE4IDM1IC0xMTMgOTQgLTE2MSA2OSAtNzAgOTAiLz4KICA8L2c+Cjwvc3ZnPgo=&logoColor=white
+
 
 [react-navigation-url]: https://reactnavigation.org/
+
+
