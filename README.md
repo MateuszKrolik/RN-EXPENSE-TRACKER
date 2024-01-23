@@ -236,18 +236,18 @@ Use this space to list resources you find helpful and would like to give credit 
 [product-screenshot-2]: images/android-home-screen.png
 [product-screenshot-3]: images/ios-home-screen.png
 [product-screenshot-4]: images/splash.png
-[product-screenshot-5]: images/android-add.png
-[product-screenshot-6]: images/ios-add.png
-[product-screenshot-7]: images/android-no-recent.png
-[product-screenshot-8]: images/ios-no-recent.png
-[product-screenshot-7]: images/android-all.png
-[product-screenshot-8]: images/ios-all.png
-[product-screenshot-9]: images/android-error-handling.png
-[product-screenshot-10]: images/ios-error-handling.png
-[product-screenshot-11]: images/android-error-handling.png
-[product-screenshot-12]: images/ios-error-handling.png
-[product-screenshot-13]: images/ios-flatlist-scroll.png
-[product-screenshot-14]: images/figma-expo.png
+[product-screenshot-5]: images/android-no-recent-1.png
+[product-screenshot-6]: images/ios-no-recent-1.png
+[product-screenshot-7]: images/android-add-1.png
+[product-screenshot-8]: images/ios-add-1.png
+[product-screenshot-9]: images/android-no-recent.png
+[product-screenshot-10]: images/ios-no-recent.png
+[product-screenshot-11]: images/android-all.png
+[product-screenshot-12]: images/ios-all.png
+[product-screenshot-13]: images/ios-error-handling.png
+[product-screenshot-14]: images/android-error-handling.png
+[product-screenshot-15]: images/ios-flatlist-scroll.png
+[product-screenshot-16]: images/figma-expo.png
 
 
 [unix-shield]: https://img.shields.io/badge/Unix-FCC624?style=for-the-badge&logo=linux&logoColor=black
