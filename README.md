@@ -11,7 +11,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/MateuszKrolik/RN-EXPENSE-TRACKER">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/logo.png" alt="Logo" width="240" height="240">
   </a>
 
 <h3 align="center">Expense Tracker App</h3>
@@ -74,6 +74,16 @@
 ### Built With
 
 - [![React][React.js]][React-url]
+- [![React Native][react-native-shield]][react-native-url]
+- [![Expo][expo-shield]][expo-url]
+- [![JavaScript][javascript-shield]][javascript-url]
+- [![Node.js][nodejs-shield]][nodejs-url]
+- [![npm][npm-shield]][npm-url]
+- [![Redux][redux-shield]][redux-url]
+- [![Firebase][firebase-shield]][firebase-url]
+- [![Firestore][firestore-shield]][firestore-url]
+- [![Firebase Auth][firebase-auth-shield]][firebase-auth-url]
+- [![EAS][eas-shield]][eas-url]
 - [![Django][Django.com]][Django-url]
 - [![PostgreSQL][PostgreSQL.com]][PostgreSQL-url]
 - [![AWS][AWS.com]][AWS-url]
@@ -167,7 +177,7 @@ Don't forget to give the project a star! Thanks again!
 
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the MIT License. See `LICENSE` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -212,7 +222,7 @@ Use this space to list resources you find helpful and would like to give credit 
 [issues-shield]: https://img.shields.io/github/issues/MateuszKrolik/RN-EXPENSE-TRACKER.svg?style=for-the-badge
 [issues-url]: https://github.com/MateuszKrolik/RN-EXPENSE-TRACKER/issues
 [license-shield]: https://img.shields.io/github/license/MateuszKrolik/RN-EXPENSE-TRACKER.svg?style=for-the-badge
-[license-url]: https://github.com/MateuszKrolik/RN-EXPENSE-TRACKER/blob/master/LICENSE.txt
+[license-url]: https://github.com/MateuszKrolik/RN-EXPENSE-TRACKER/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/mateusz-kr%C3%B3lik-8b1862262/
 [product-screenshot-1]: images/screenshot-1.png
@@ -255,3 +265,25 @@ Use this space to list resources you find helpful and would like to give credit 
 
 [AWS-S3.com]: https://img.shields.io/badge/AWS_S3-%236044D1.svg?style=for-the-badge&logo=amazons3&logoColor=white
 [AWS-S3-url]: https://aws.amazon.com/s3/
+
+[react-native-shield]: https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[react-native-url]: https://reactnative.dev/
+[expo-shield]: https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=expo&logoColor=white
+[expo-url]: https://expo.dev/
+[javascript-shield]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
+[javascript-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+[nodejs-shield]: https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white
+[nodejs-url]: https://nodejs.org/
+[npm-shield]: https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white
+[npm-url]: https://www.npmjs.com/
+
+[redux-shield]: https://img.shields.io/badge/Redux-764ABC?style=for-the-badge&logo=redux&logoColor=white
+[redux-url]: https://redux.js.org/
+[firebase-shield]: https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black
+[firebase-url]: https://firebase.google.com/
+[firestore-shield]: https://img.shields.io/badge/Firestore-FFA611?style=for-the-badge&logo=firebase&logoColor=black
+[firestore-url]: https://firebase.google.com/products/firestore
+[firebase-auth-shield]: https://img.shields.io/badge/Firebase_Auth-FFA611?style=for-the-badge&logo=firebase&logoColor=black
+[firebase-auth-url]: https://firebase.google.com/products/auth
+[eas-shield]: https://img.shields.io/badge/EAS-000020?style=for-the-badge&logo=expo&logoColor=white
+[eas-url]: https://expo.dev/services
