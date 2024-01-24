@@ -178,7 +178,7 @@ You can do both with this one command:
     eas secret:create FIREBASE_DATABASE_URL "your-firebase-database-url"
     eas secret:create FIREBASE_PROJECT_ID "your-firebase-project-id"
     eas secret:create FIREBASE_STORAGE_BUCKET "your-firebase-storage-bucket"
-    eas secret:create FIREBASE_MESSAGING_SENDER_ID "your-firebase-messaging-          sender-id"
+    eas secret:create FIREBASE_MESSAGING_SENDER_ID "your-firebase-messaging-sender-id"
     eas secret:create FIREBASE_APP_ID "your-firebase-app-id"
     eas secret:create BACKEND_URL "your-backend-url
    ```
