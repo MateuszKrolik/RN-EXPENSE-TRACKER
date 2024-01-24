@@ -80,7 +80,7 @@
 ![Product Name Screen Shot][product-screenshot-13]
 ![Product Name Screen Shot][product-screenshot-14]
 ![Product Name Screen Shot][product-screenshot-15]
-![Product Name Screen Shot][product-screenshot-16]
+[![Product Name Screen Shot](images/figma-expo.png)](https://www.figma.com/file/HGbl3acVwTajtxJSPA0LKw/Expo-App-Icon-%26-Splash-(Community)?type=design&node-id=0%3A1&mode=design&t=flAx8U30VJ7rxKN1-1)
 
 </div>
 
@@ -319,6 +319,8 @@ IOS Simulator Link: [https://expo.dev/artifacts/eas/t8jbD8SChv29q3J6wt2WB7.tar.g
 
 Project Repository Link: [https://github.com/MateuszKrolik/RN-EXPENSE-TRACKER](https://github.com/MateuszKrolik/RN-EXPENSE-TRACKER)
 
+Figma Icon and Splash Design Link: [https://www.figma.com/file/HGbl3acVwTajtxJSPA0LKw/Expo-App-Icon-%26-Splash-(Community)?type=design&node-id=0%3A1&mode=design&t=flAx8U30VJ7rxKN1-1](https://www.figma.com/file/HGbl3acVwTajtxJSPA0LKw/Expo-App-Icon-%26-Splash-(Community)?type=design&node-id=0%3A1&mode=design&t=flAx8U30VJ7rxKN1-1)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGMENTS -->
@@ -331,6 +333,7 @@ Use this space to list resources you find helpful and would like to give credit 
 * [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
 * [Malven's Grid Cheatsheet](https://grid.malven.co/)
 * [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+* [Expo App Icon & Splash Figma Template](https://www.figma.com/community/file/1155362909441341285)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
