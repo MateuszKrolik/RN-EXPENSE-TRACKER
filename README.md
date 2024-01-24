@@ -74,6 +74,9 @@
 ![Product Name Screen Shot][product-screenshot-12]
 ![Product Name Screen Shot][product-screenshot-13]
 ![Product Name Screen Shot][product-screenshot-14]
+![Product Name Screen Shot][product-screenshot-15]
+![Product Name Screen Shot][product-screenshot-16]
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -244,8 +247,8 @@ Use this space to list resources you find helpful and would like to give credit 
 [product-screenshot-10]: images/ios-no-recent.png
 [product-screenshot-11]: images/android-all.png
 [product-screenshot-12]: images/ios-all.png
-[product-screenshot-13]: images/ios-error-handling.png
-[product-screenshot-14]: images/android-error-handling.png
+[product-screenshot-13]: images/android-error-handling.png
+[product-screenshot-14]: images/ios-error-handling.png
 [product-screenshot-15]: images/ios-flatlist-scroll.png
 [product-screenshot-16]: images/figma-expo.png
 
