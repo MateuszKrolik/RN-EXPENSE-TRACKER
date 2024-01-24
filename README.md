@@ -264,7 +264,7 @@ as you'll see shortly in below section ⬇⬇⬇.
 <!-- CHALLENGES AND DIFFICULTIES -->
 ## Challenges and Difficulties
 
-While making this App, the part that i found the most difficult
+While making this App, the part that I found the most difficult
 was overcoming a deadline of my Realtime Database from being dropped.
 I got an e-mail from Firebase stating that if I don't update
 database rules to use some sort of User Authentication, then they'll 
