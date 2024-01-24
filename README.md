@@ -60,7 +60,7 @@
 
 ## About The Project
 
-![Product Name Screen Shot][product-screenshot-1]
+[![Product Name Screen Shot](images/android-apk-qr.png)](https://expo.dev//accounts/mateuszkrolik87/projects/RN-EXPENSE-TRACKER/builds/9d5cc42a-1603-45cc-8e2a-b5a1517c2ec7)
 ![Product Name Screen Shot][product-screenshot-2]
 ![Product Name Screen Shot][product-screenshot-3]
 ![Product Name Screen Shot][product-screenshot-4]
@@ -197,7 +197,7 @@ Mateusz Królik - mateuszkrolik87@gmail.com
 
 Android APK Link: [https://expo.dev//accounts/mateuszkrolik87/projects/RN-EXPENSE-TRACKER/builds/9d5cc42a-1603-45cc-8e2a-b5a1517c2ec7](https://expo.dev//accounts/mateuszkrolik87/projects/RN-EXPENSE-TRACKER/builds/9d5cc42a-1603-45cc-8e2a-b5a1517c2ec7)
 
-Ios Simulator Link: [https://expo.dev/artifacts/eas/t8jbD8SChv29q3J6wt2WB7.tar.gz](https://expo.dev/artifacts/eas/t8jbD8SChv29q3J6wt2WB7.tar.gz)
+IOS Simulator Link: [https://expo.dev/artifacts/eas/t8jbD8SChv29q3J6wt2WB7.tar.gz](https://expo.dev/artifacts/eas/t8jbD8SChv29q3J6wt2WB7.tar.gz)
 
 Project Repository Link: [https://github.com/MateuszKrolik/RN-EXPENSE-TRACKER](https://github.com/MateuszKrolik/RN-EXPENSE-TRACKER)
 
