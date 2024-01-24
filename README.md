@@ -14,7 +14,7 @@
     <img src="images/logo.png" alt="Logo" width="240" height="240">
   </a>
 
-<h3 align="center">Expense Tracker App</h3>
+<h3 align="center">My Expense Tracker ©</h3>
 
   <p align="center">
     Cross-Platform Expense Tracker App
@@ -65,9 +65,9 @@
 
 <div align="center">
   
-[![Product Name Screen Shot](images/android-apk-qr.png)](https://expo.dev//accounts/mateuszkrolik87/projects/RN-EXPENSE-TRACKER/builds/9d5cc42a-1603-45cc-8e2a-b5a1517c2ec7)
-![Product Name Screen Shot][product-screenshot-2]
-![Product Name Screen Shot][product-screenshot-3]
+[![Product Name Screen Shot](images/android-apk-qr.png)](https://expo.dev////accounts/mateuszkrolik87/projects/RN-EXPENSE-TRACKER/builds/9d5cc42a-1603-45cc-8e2a-b5a1517c2ec7)
+[![Product Name Screen Shot](images/android-home-screen.png)](https://expo.dev////accounts/mateuszkrolik87/projects/RN-EXPENSE-TRACKER/builds/9d5cc42a-1603-45cc-8e2a-b5a1517c2ec7)
+[![Product Name Screen Shot](images/ios-home-screen.png)](https://expo.dev/artifacts/eas/t8jbD8SChv29q3J6wt2WB7.tar.gz)
 ![Product Name Screen Shot][product-screenshot-4]
 ![Product Name Screen Shot][product-screenshot-5]
 ![Product Name Screen Shot][product-screenshot-6]
@@ -217,6 +217,9 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [x] Anonymous Authentication via Firebase
     - [x] User Session Persistance across App Reloads
 - [x] Shared screen for Managing Expenses
+  - [x] Date Placeholders with Numerical Keyboard Trigger
+  - [x] Prepopulated form for Update Expense
+- [x] Total Summary Counter for both Weekly and Overall Expenses
 - [x] User Input validation
     - [x] Date formatting
     - [x] Descriptive Error Messages
@@ -228,7 +231,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [x] Responsive Design using FlexBox & Grid
 - [x] FlatList Component for Optimized Scroll Item Rendering
 - [x] Optimized Splash Screen
-- [x] Adaptive App Icon made using Generative AI!
+- [x] Adaptive App Icon made using Generative AI
 
 
 See the [open documentation](https://github.com/MateuszKrolik/RN-EXPENSE-TRACKER/issues) for a full list of proposed features (and known issues).
@@ -251,7 +254,7 @@ I also recognized the importance of App-Wide state management
 for One-Way-Data-Flow encouragement and Immutability.
 
 These skills will be directly applicable in my every day life
-as a FullStack Web/Mobile Developer! 
+and future career as a FullStack Web/Mobile Developer! 
 
 I also learned the importance of User Authentication, 
 as you'll see shortly in below section ⬇⬇⬇.
@@ -265,7 +268,8 @@ While making this App, the part that i found the most difficult
 was overcoming a deadline of my Realtime Database from being dropped.
 I got an e-mail from Firebase stating that if I don't update
 database rules to use some sort of User Authentication, then they'll 
-drop it completly! That meant complete app re-design under a 4 day time limit!
+drop it completly! Also even when i did, non-logged in users weren't able to write into it.
+That meant complete app re-design under a 4 day time limit!
 There was also an issue of User Session Data not persisting upon App Restarts,
 but I solved it using Third-Party tools and Libraries. 
 You can see the details in below screenshots ⬇⬇⬇.
@@ -440,4 +444,4 @@ Use this space to list resources you find helpful and would like to give credit 
 
 [midjourney-shield]: https://raster.shields.io/badge/Midjourney-FFFFFF?style=for-the-badge&logo=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcgdmVyc2lvbj0iMS4xIiB3aWR0aD0iMTAyNCIgaGVpZ2h0PSIxMDI0IiAKCXhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgCgl4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+Cgo8ZyBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTpibGFjaztzdHJva2Utd2lkdGg6MThweDtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQiPgogIDxwYXRoIGlkPSJ3YXZlcyIgZD0ibSAxNzQsNzk0IAoJYyAyMCwwIDUwLC00MiA4NSwtNDggYyAyMCwwIDM1LDQyIDg1LDQ4IAoJYyAzNSwwIDUwLC00MiA4NSwtNDIgYyAzNSwwIDUwLDQyIDg1LDQyIAoJYyAzNSwwIDUwLC00MiA4NSwtNDIgYyAzNSwwIDUwLDQyIDg1LDQyIAoJYyAzNSwwIDUwLC00MiA4NSwtNDIgYyAzNSwwIDUwLDQyIDg1LDQyIi8+CiAgPHBhdGggaWQ9Imh1bGwiIGQ9Ik0gMjQyLjQsNzUyLjIgTCAyMTkuNSw3MDguNCBMIDgwOS41LDY3MC40IEMgNzYzLjEsNzEyLjYgNzAzLjUsNzQ2LjggNjQzLjIsNzc0LjgiLz4KICA8cGF0aCBpZD0iZnJvbnRfc2FpbCIgZD0iTSA0NTQuNCwzMDAuNCBDIDU1NC44LDMzMS4xIDY5NS4yLDQ3OS40IDc0Myw2MzguOCBDIDcxNi44LDYyOC41IDY5Ny4yLDYxOCA2NjAuNCw2MjcuNCAKCUMgNjI0LjgsNDk3LjkgNTYxLjEsMzc0LjIgNDU0LjQsMzAwLjQgeiIvPgogIDxwYXRoIGlkPSJyZWFyX3NhaWwiIGQ9Ik0gMjY3LjcsMjI5LjUgQyAzOTYuMywyODQuNSA1NzIuNyw0MzcuNiA2MDUuMSw2NDEuNSBDIDQ1Ni44LDU4MS43IDM0My45LDYxMy42IDI2NS4zLDY2Mi4xIAoJQyAzODUuMiw1MDkuNyAzMzEuNCwzMzYuNCAyNjcuNywyMjkuNSB6Ii8+CjwvZz4KCjwvc3ZnPg==
 
-[midjourney-url]: https://openai.com/research/dall-e/
+[midjourney-url]: https://www.midjourney.com/home?callbackUrl=%2Fexplore
