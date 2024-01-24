@@ -47,8 +47,11 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
+    <li><a href="#motivation">Motivation</a></li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#what-i-learned">What I Learned</a></li>
+    <li><a href="#challenges-and-difficulties">Challenges and Difficulties</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -60,6 +63,8 @@
 
 ## About The Project
 
+<div align="center">
+  
 [![Product Name Screen Shot](images/android-apk-qr.png)](https://expo.dev//accounts/mateuszkrolik87/projects/RN-EXPENSE-TRACKER/builds/9d5cc42a-1603-45cc-8e2a-b5a1517c2ec7)
 ![Product Name Screen Shot][product-screenshot-2]
 ![Product Name Screen Shot][product-screenshot-3]
@@ -77,7 +82,7 @@
 ![Product Name Screen Shot][product-screenshot-15]
 ![Product Name Screen Shot][product-screenshot-16]
 
-
+</div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -104,28 +109,47 @@
 - [![Android Studio][android-studio-shield]][android-studio-url]
 - [![React Navigation][react-navigation-shield]][react-navigation-url]
 - [![Babel][babel-shield]][babel-url]
-
-
+- [![VSCode][vscode-shield]][vscode-url]
+- [![Midjourney][midjourney-shield]][midjourney-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- MOTIVATION -->
+## Motivation
+
+From a very young age, I've always struggled to keep up with my finances.
+With time and rapid technological advancements it only has gotten worse. 
+That's why i made this App, for all the people that can relate to my situation!
+If you've always struggled to realise your living costs at the end of each week
+or even without a specific time boundary, I got you covered!
+Simply proceed further to below sections, in order to get yourself up and running ⬇⬇⬇!
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To get started with this project, you'll need to set up a local development environment and get a Firebase API key. Follow the steps in the "Prerequisites" and "Installation" sections to get everything set up.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
+Before you can run this project, you'll need to have Node.js and npm installed on your machine. If you don't have them installed, you can install Node.js and npm with the following command:
+
+1. npm
   ```sh
   npm install npm@latest -g
   ```
+2. To run locally you'll also need Android Studio and XCode for Mac,
+but mostly for their emulators.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
+1. Get a free API Key at [https://firebase.com](https://firebase.com)
 2. Clone the repo
    ```sh
    git clone https://github.com/MateuszKrolik/RN-EXPENSE-TRACKER.git
@@ -134,9 +158,35 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+4. Enter your API in `.env`
+   ```
+    FIREBASE_API_KEY = YOUR_FIREBASE_API_KEY
+    FIREBASE_AUTH_DOMAIN = YOUR_FIREBASE_AUTH_DOMAIN
+    FIREBASE_DATABASE_URL = YOUR_FIREBASE_DATABASE_URL
+    FIREBASE_PROJECT_ID = YOUR_FIREBASE_PROJECT_ID
+    FIREBASE_STORAGE_BUCKET = YOUR_FIREBASE_STORAGE_BUCKET
+    FIREBASE_MESSAGING_SENDER_ID = YOUR_FIREBASE_MESSAGING_SENDER_ID
+    FIREBASE_APP_ID = YOUR_FIREBASE_APP_ID
+    BACKEND_URL = YOUR_BACKEND_URL
+   ```
+5. Also in EAS CLI:
+   ```sh
+    npm install -g eas-cli
+    eas login
+    eas secret:create FIREBASE_API_KEY "your-firebase-api-key"
+    eas secret:create FIREBASE_AUTH_DOMAIN "your-firebase-auth-domain"
+    eas secret:create FIREBASE_DATABASE_URL "your-firebase-database-url"
+    eas secret:create FIREBASE_PROJECT_ID "your-firebase-project-id"
+    eas secret:create FIREBASE_STORAGE_BUCKET "your-firebase-storage-bucket"
+    eas secret:create FIREBASE_MESSAGING_SENDER_ID "your-firebase-messaging-          sender-id"
+    eas secret:create FIREBASE_APP_ID "your-firebase-app-id"
+    eas secret:create BACKEND_URL "your-backend-url
+   ```
+   You will be prompted to choose between string or file, simply choose string and hit ENTER.
+7. To run a build:
+   ```sh
+   eas build:configure
+   eas build --platform all
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -144,7 +194,15 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+1. To open using both Android and IOS emulators in development mode run:
+   ```sh
+   npm start
+   a
+   i
+   ```
+2. Or simply drag and drop your builds into your emulators.
+3. You can also find these builds attached at the very bottom if you're in a hurry 😉.
+4. For Android, you can also scan/tap the QR code at the very top of this readme ⬆⬆⬆.
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
@@ -154,15 +212,71 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- [x] CRUD functionality via Realtime Firestore Database
+- [x] HTTP requests via Axios
+- [x] Anonymous Authentication via Firebase
+    - [x] User Session Persistance across App Reloads
+- [x] Shared screen for Managing Expenses
+- [x] User Input validation
+    - [x] Date formatting
+    - [x] Descriptive Error Messages
+- [x] Bottom Tab & Stack Navigation via React Navigation
+- [x] App-Wide State Management via Redux Toolkit
+    - [x] Component-Wide State Management via Hooks
+- [x] Screen Size Adaptiveness
+- [x] Styling Adaptiveness for both Platforms
+- [x] Responsive Design using FlexBox & Grid
+- [x] FlatList Component for Optimized Scroll Item Rendering
+- [x] Optimized Splash Screen
+- [x] Adaptive App Icon made using Generative AI!
 
 
 See the [open documentation](https://github.com/MateuszKrolik/RN-EXPENSE-TRACKER/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- WHAT I LEARNED -->
+## What I Learned
+
+By making this app I learned a lot about modern UI development. 
+Up until this point, as an aspiring "pure" backend developer, 
+I only made Multi-Page Applications, that would
+trigger full page re-renders upon every request.
+which would be slow to load for the end user.
+
+By choosing to build this app using React and Redux
+I realised the benefits of Mobile/Single Page Applications
+built using a Reactive, Declarative UI Framework.
+I also recognized the importance of App-Wide state management
+for One-Way-Data-Flow encouragement and Immutability.
+
+These skills will be directly applicable in my every day life
+as a FullStack Web/Mobile Developer! 
+
+I also learned the importance of User Authentication, 
+as you'll see shortly in below section ⬇⬇⬇.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CHALLENGES AND DIFFICULTIES -->
+## Challenges and Difficulties
+
+While making this App, the part that i found the most difficult
+was overcoming a deadline of my Realtime Database from being dropped.
+I got an e-mail from Firebase stating that if I don't update
+database rules to use some sort of User Authentication, then they'll 
+drop it completly! That meant complete app re-design under a 4 day time limit!
+There was also an issue of User Session Data not persisting upon App Restarts,
+but I solved it using Third-Party tools and Libraries. 
+You can see the details in below screenshots ⬇⬇⬇.
+
+![Product Name Screen Shot][product-screenshot-17]
+![Product Name Screen Shot][product-screenshot-18]
+![Product Name Screen Shot][product-screenshot-19]
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- CONTRIBUTING -->
 
@@ -208,14 +322,11 @@ Project Repository Link: [https://github.com/MateuszKrolik/RN-EXPENSE-TRACKER](h
 
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+* [Ionicons](https://ionic.io/ionicons)
+* [Img Shields](https://shields.io)
 * [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
 * [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -251,6 +362,10 @@ Use this space to list resources you find helpful and would like to give credit 
 [product-screenshot-14]: images/ios-error-handling.png
 [product-screenshot-15]: images/ios-flatlist-scroll.png
 [product-screenshot-16]: images/figma-expo.png
+[product-screenshot-17]: images/firebase-mail.png
+[product-screenshot-18]: images/firebase-rules.png
+[product-screenshot-19]: images/firebase-auth.png
+
 
 
 [unix-shield]: https://img.shields.io/badge/Unix-FCC624?style=for-the-badge&logo=linux&logoColor=black
@@ -320,3 +435,9 @@ Use this space to list resources you find helpful and would like to give credit 
 [react-navigation-url]: https://reactnavigation.org/
 
 
+[vscode-shield]: https://img.shields.io/badge/VSCode-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white
+[vscode-url]: https://code.visualstudio.com/
+
+[midjourney-shield]: https://raster.shields.io/badge/Midjourney-FFFFFF?style=for-the-badge&logo=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcgdmVyc2lvbj0iMS4xIiB3aWR0aD0iMTAyNCIgaGVpZ2h0PSIxMDI0IiAKCXhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgCgl4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+Cgo8ZyBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTpibGFjaztzdHJva2Utd2lkdGg6MThweDtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQiPgogIDxwYXRoIGlkPSJ3YXZlcyIgZD0ibSAxNzQsNzk0IAoJYyAyMCwwIDUwLC00MiA4NSwtNDggYyAyMCwwIDM1LDQyIDg1LDQ4IAoJYyAzNSwwIDUwLC00MiA4NSwtNDIgYyAzNSwwIDUwLDQyIDg1LDQyIAoJYyAzNSwwIDUwLC00MiA4NSwtNDIgYyAzNSwwIDUwLDQyIDg1LDQyIAoJYyAzNSwwIDUwLC00MiA4NSwtNDIgYyAzNSwwIDUwLDQyIDg1LDQyIi8+CiAgPHBhdGggaWQ9Imh1bGwiIGQ9Ik0gMjQyLjQsNzUyLjIgTCAyMTkuNSw3MDguNCBMIDgwOS41LDY3MC40IEMgNzYzLjEsNzEyLjYgNzAzLjUsNzQ2LjggNjQzLjIsNzc0LjgiLz4KICA8cGF0aCBpZD0iZnJvbnRfc2FpbCIgZD0iTSA0NTQuNCwzMDAuNCBDIDU1NC44LDMzMS4xIDY5NS4yLDQ3OS40IDc0Myw2MzguOCBDIDcxNi44LDYyOC41IDY5Ny4yLDYxOCA2NjAuNCw2MjcuNCAKCUMgNjI0LjgsNDk3LjkgNTYxLjEsMzc0LjIgNDU0LjQsMzAwLjQgeiIvPgogIDxwYXRoIGlkPSJyZWFyX3NhaWwiIGQ9Ik0gMjY3LjcsMjI5LjUgQyAzOTYuMywyODQuNSA1NzIuNyw0MzcuNiA2MDUuMSw2NDEuNSBDIDQ1Ni44LDU4MS43IDM0My45LDYxMy42IDI2NS4zLDY2Mi4xIAoJQyAzODUuMiw1MDkuNyAzMzEuNCwzMzYuNCAyNjcuNywyMjkuNSB6Ii8+CjwvZz4KCjwvc3ZnPg==
+
+[midjourney-url]: https://openai.com/research/dall-e/
