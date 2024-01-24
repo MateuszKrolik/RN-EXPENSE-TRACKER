@@ -130,20 +130,20 @@ Simply proceed further to below sections, in order to get yourself up and runnin
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To get started with this project, you'll need to set up a local development environment and get a Firebase API key. Follow the steps in the "Prerequisites" and "Installation" sections to get everything set up.
+To get started with this project, you'll need to set up a local development environment and get a Firebase API key.
+Follow the steps in below "Prerequisites" and "Installation" sections to get yourself up and running fairly quick ⬇⬇⬇.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Prerequisites
 
-Before you can run this project, you'll need to have Node.js and npm installed on your machine. If you don't have them installed, you can install Node.js and npm with the following command:
-
+Before you can run this project locally, you'll need to have Node.js and npm installed on your machine. 
+You can do both with this one command:
 1. npm
   ```sh
   npm install npm@latest -g
   ```
-2. To run locally you'll also need Android Studio and XCode for Mac,
-but mostly for their emulators.
+2. You'll also need Android Studio and XCode for Mac, but mostly for their emulators.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -245,7 +245,7 @@ By making this app I learned a lot about modern UI development.
 Up until this point, as an aspiring "pure" backend developer, 
 I only made Multi-Page Applications, that would
 trigger full page re-renders upon every request.
-which would be slow to load for the end user.
+That approach was slow to load for the end user.
 
 By choosing to build this app using React and Redux
 I realised the benefits of Mobile/Single Page Applications
@@ -265,11 +265,11 @@ as you'll see shortly in below section ⬇⬇⬇.
 ## Challenges and Difficulties
 
 While making this App, the part that I found the most difficult
-was overcoming a deadline of my Realtime Database from being dropped.
+was overcoming a deadline of protecting my Realtime Database from being dropped.
 I got an e-mail from Firebase stating that if I don't update
 database rules to use some sort of User Authentication, then they'll 
-drop it completly! Also even when i did, non-logged in users weren't able to write into it.
-That meant complete app re-design under a 4 day time limit!
+drop it completly! Also even when I did, non-logged in users weren't able to write into it.
+That meant complete app re-design under a short 4 day time limit!
 There was also an issue of User Session Data not persisting upon App Restarts,
 but I solved it using Third-Party tools and Libraries. 
 You can see the details in below screenshots ⬇⬇⬇.
@@ -313,9 +313,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Mateusz Królik - mateuszkrolik87@gmail.com
 
-Android APK Link: [https://expo.dev//accounts/mateuszkrolik87/projects/RN-EXPENSE-TRACKER/builds/9d5cc42a-1603-45cc-8e2a-b5a1517c2ec7](https://expo.dev//accounts/mateuszkrolik87/projects/RN-EXPENSE-TRACKER/builds/9d5cc42a-1603-45cc-8e2a-b5a1517c2ec7)
+Android APK Download Link: [https://expo.dev//accounts/mateuszkrolik87/projects/RN-EXPENSE-TRACKER/builds/9d5cc42a-1603-45cc-8e2a-b5a1517c2ec7](https://expo.dev//accounts/mateuszkrolik87/projects/RN-EXPENSE-TRACKER/builds/9d5cc42a-1603-45cc-8e2a-b5a1517c2ec7)
 
-IOS Simulator Link: [https://expo.dev/artifacts/eas/t8jbD8SChv29q3J6wt2WB7.tar.gz](https://expo.dev/artifacts/eas/t8jbD8SChv29q3J6wt2WB7.tar.gz)
+IOS Simulator Build Download Link: [https://expo.dev/artifacts/eas/t8jbD8SChv29q3J6wt2WB7.tar.gz](https://expo.dev/artifacts/eas/t8jbD8SChv29q3J6wt2WB7.tar.gz)
 
 Project Repository Link: [https://github.com/MateuszKrolik/RN-EXPENSE-TRACKER](https://github.com/MateuszKrolik/RN-EXPENSE-TRACKER)
 
